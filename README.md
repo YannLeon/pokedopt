@@ -1,1 +1,3 @@
 # pokedopt
+
+Pokedopt est une application qui permet d’adopter des Pokémons. Elle sera disponible sur navigateur web et aussi sur mobile. Grâce à cette application, les utilisateurs pourront trouver le Pokémon idéal pour eux et adapté à leur mode de vie. Ils pourront consulter les nouveaux Pokémons mis à l’adoption mais aussi ceux qui correspondent au milieu climatique dans lequel se situe la personne qui souhaite adopter car le bien être des Pokémons est primordial. De plus, sur la version mobile il sera possible d’avoir un GPS permettant de repérer les Pokémons sauvages qui peuvent être chassés pour les mettre en adoption par la suite.
