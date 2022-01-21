@@ -1,17 +1,24 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <b-alert show>Pokemon</b-alert>
+    {{response}}
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import axios from "axios";
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+  },
+  data(){
+    return {
+      response: []
+    }
+  },
+  created(){
+      axios.get("https://pokeapi.co/api/v2/pokemon").then((res)=>this.response=res.data);
   }
 }
 </script>

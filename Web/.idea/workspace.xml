@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e57ff0cd-782b-4369-9c6b-595863ca28db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/Web.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/main.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +40,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1642752846710</updated>
-      <workItem from="1642752847807" duration="1519000" />
+      <workItem from="1642752847807" duration="3642000" />
     </task>
     <servers />
   </component>
