@@ -5,14 +5,14 @@
       img-alt="Image"
       img-top
       tag="article"
-      style="max-width: 20rem;"
-      class="mb-2"
+      style="max-width: 15rem;"
+      class="m-1"
   >
     <b-card-text>
-      Some quick example text to build on the card title and make up the bulk of the card's content.
+      A great pokemon
     </b-card-text>
 
-    <b-button href="#" variant="primary">Go somewhere</b-button>
+    <b-button href="#" variant="primary">Adopt it!</b-button>
   </b-card>
 </template>
 
