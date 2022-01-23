@@ -1,13 +1,9 @@
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {Text, View} from 'react-native';
 import React from 'react';
 export const MarketScreen = () => {
-  return(<View ><Text>AMRKET</Text></View>)
+  return (
+    <View>
+      <Text style={{textAlign: 'center', color: 'black'}}>AMRKET</Text>
+    </View>
+  );
 };
