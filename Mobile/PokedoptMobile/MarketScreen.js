@@ -7,7 +7,7 @@ import {
   useColorScheme,
   View,
 } from 'react-native';
-
+import React from 'react';
 export const MarketScreen = () => {
   return(<View ><Text>AMRKET</Text></View>)
 };
