@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View, StyleSheet} from 'react-native';
+import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 
@@ -32,7 +32,7 @@ export const MapComponent = () => {
   }, []);
   return (
     <View style={styles.container}>
-      {location && (
+      {location ? (
         <MapView
           provider={PROVIDER_GOOGLE}
           style={styles.map}
@@ -44,6 +44,10 @@ export const MapComponent = () => {
             longitudeDelta: 0.0421,
           }}
         />
+      ) : (
+          <View style={[styles.container2, styles.horizontal]}>
+        <ActivityIndicator size="large" />
+          </View>
       )}
     </View>
   );
@@ -58,4 +62,13 @@ const styles = StyleSheet.create({
   map: {
     ...StyleSheet.absoluteFillObject,
   },
+  container2: {
+    flex: 1,
+    justifyContent: "center"
+  },
+  horizontal: {
+    flexDirection: "row",
+    justifyContent: "space-around",
+    padding: 10
+  }
 });
