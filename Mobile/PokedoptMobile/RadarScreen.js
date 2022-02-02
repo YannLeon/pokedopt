@@ -4,8 +4,12 @@ import {MapComponent} from './MapComponent';
 export const RadarScreen = () => {
   return (
     <View style={{height:"100%"}}>
-      <Text style={{textAlign: 'center', color: 'black'}}>RAFAD</Text>
+        <View style={{height:"10%"}}>
+      <Text style={{textAlign: 'center', color: 'black',height:50}}>RAFAD</Text>
+        </View>
+        <View style={{height:"90%"}}>
         <MapComponent/>
+        </View>
     </View>
   );
 };
