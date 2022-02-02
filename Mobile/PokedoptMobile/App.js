@@ -3,12 +3,15 @@ import React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 
 import {BottomNavigation} from './BottomNavigation';
+import {UserContextProvider} from './userContext';
 
 const App = () => {
   return (
-    <NavigationContainer>
-      <BottomNavigation />
-    </NavigationContainer>
+    <UserContextProvider>
+      <NavigationContainer>
+        <BottomNavigation />
+      </NavigationContainer>
+    </UserContextProvider>
   );
 };
 
