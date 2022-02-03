@@ -5,9 +5,9 @@ export const MarketScreen = () => {
   return (
     <View>
       <Text style={{textAlign: 'center', color: 'black'}}>AMRKET</Text>
-      <View>
+      <View style={{marginBottom:45}}>
         <FlatList
-          data={['kangaskhan','spheal','charizard','gyarados','magikarp','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan']}
+          data={['kangaskhan','spheal','charizard','gyarados','magikarp','dialga','mewtwo','mew','celebi','tentacool','chikorita','turtwig','piplup','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan','kangaskhan']}
           renderItem={({item}) => (<PokemonCard name={item}/>)}
         />
       </View>

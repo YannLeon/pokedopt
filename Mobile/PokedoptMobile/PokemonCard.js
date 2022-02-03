@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Text, View,Image} from 'react-native';
+import {Text, View,Image,Button, Alert} from 'react-native';
 import {Card} from 'react-native-elements';
 import {black} from 'react-native-paper/lib/typescript/styles/colors';
 export const PokemonCard = props =>{
@@ -19,6 +19,7 @@ export const PokemonCard = props =>{
             <Card>
                 <Image style={{width: 100, height: 100}} source ={{uri:picture}}/>
                 <Text style={{color:"black", textAlign: 'center'}} >{props.name}</Text>
+                <Button OnPress={()=>console.log(props.name + " just got bought")} title="Adopt it!"/>
             </Card>        
         </View>
     )
