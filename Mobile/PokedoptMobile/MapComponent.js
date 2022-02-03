@@ -19,16 +19,40 @@ export const MapComponent = () => {
   useEffect(() => {
     location &&
       setPokemons([
-        {
-          name: 'spheal',
-          location: {
-            latitude: location.latitude - 0.001,
-            longitude: location.longitude + 0.001,
-          },
-          radius: 70,
-        },
+        createPokemon("spheal"),
+        createPokemon("kangaskhan"),
+        createPokemon("charizard"),
+          createPokemon("charmander"),
+          createPokemon("zubat"),
+        createPokemon("rowlet"),
+        createPokemon("geodude"),
+        createPokemon("nuzleaf"),
+          createPokemon("chikorita"),
+          createPokemon("bastiodon"),
+          createPokemon("pikachu"),
+          createPokemon("pichu"),
+        createPokemon("turtwig"),
+          createPokemon("piplup")
       ]);
   }, [location]);
+
+  const randLatLong=()=>{
+    return Math.random()/75* (Math.random()>0.5?1:-1)
+  }
+  const randRadius=()=>{
+    return Math.random()*200
+  }
+
+  const createPokemon = (name) => {
+    return {
+      name: name,
+      location: {
+        latitude: location.latitude + randLatLong(),
+        longitude: location.longitude + randLatLong(),
+      },
+      radius: randRadius(),
+    }
+  }
 
   const onRegionChange = region => {
     setRegion(region);
