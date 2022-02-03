@@ -25,6 +25,7 @@ export const PokemonPictureMarker = props => {
         [props.location.latitude + props.radius / 130000, props.location.longitude + props.radius / 60000],
       ]}
       image={picture}
+      opacity={0.5}
     />
   );
 };

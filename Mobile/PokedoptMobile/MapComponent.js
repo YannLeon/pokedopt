@@ -3,6 +3,7 @@ import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Circle} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import {PokemonPictureMarker} from './PokemonPictureMarker';
+import {PokemonCircleMarker} from './PokemonCircleMarker';
 
 export const MapComponent = () => {
   const [region2, setRegion] = useState({
@@ -62,11 +63,7 @@ export const MapComponent = () => {
           }}>
           {pokemons.length > 0 &&
             pokemons.map((pokemon, index) => (
-              <Circle
-                center={pokemon.location}
-                radius={pokemon.radius}
-                key={index}
-              />
+<PokemonCircleMarker pokemon={pokemon} key={index}/>
             ))}
           {pokemons.length > 0 &&
             pokemons.map((pokemon, index) => (
