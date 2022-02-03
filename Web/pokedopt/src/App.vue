@@ -13,9 +13,19 @@ export default {
   components: {
     NavBar
   },
+  created() {
+    if(screen.width < 500){
+      this.$store.commit('setMobile',true);
+    }
+    console.log(screen.width);
+  },
 }
 </script>
 
 <style>
-
+ #app{
+    display: flex;
+    flex-flow: column;
+    height: 100vh;
+ }
 </style>
