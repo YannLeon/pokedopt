@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
 import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
-import MapView, {PROVIDER_GOOGLE} from 'react-native-maps';
+import MapView, {PROVIDER_GOOGLE, Circle} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
+import {PokemonPictureMarker} from './PokemonPictureMarker';
 
 export const MapComponent = () => {
   const [region2, setRegion] = useState({
@@ -11,6 +12,22 @@ export const MapComponent = () => {
     longitudeDelta: 0.0421,
   });
   const [location, setLocation] = useState(undefined);
+
+  const [pokemons, setPokemons] = useState([]);
+
+  useEffect(() => {
+    location &&
+      setPokemons([
+        {
+          name: 'spheal',
+          location: {
+            latitude: location.latitude - 0.001,
+            longitude: location.longitude + 0.001,
+          },
+          radius: 70,
+        },
+      ]);
+  }, [location]);
 
   const onRegionChange = region => {
     setRegion(region);
@@ -42,12 +59,28 @@ export const MapComponent = () => {
             longitude: location.longitude,
             latitudeDelta: 0.0922,
             longitudeDelta: 0.0421,
-          }}
-        />
+          }}>
+          {pokemons.length > 0 &&
+            pokemons.map((pokemon, index) => (
+              <Circle
+                center={pokemon.location}
+                radius={pokemon.radius}
+                key={index}
+              />
+            ))}
+          {pokemons.length > 0 &&
+            pokemons.map((pokemon, index) => (
+              <PokemonPictureMarker
+                location={pokemon.location}
+                name={pokemon.name}
+                key={index}
+              />
+            ))}
+        </MapView>
       ) : (
-          <View style={[styles.container2, styles.horizontal]}>
-        <ActivityIndicator size="large" />
-          </View>
+        <View style={[styles.container2, styles.horizontal]}>
+          <ActivityIndicator size="large" />
+        </View>
       )}
     </View>
   );
@@ -64,11 +97,11 @@ const styles = StyleSheet.create({
   },
   container2: {
     flex: 1,
-    justifyContent: "center"
+    justifyContent: 'center',
   },
   horizontal: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    padding: 10
-  }
+    flexDirection: 'row',
+    justifyContent: 'space-around',
+    padding: 10,
+  },
 });
