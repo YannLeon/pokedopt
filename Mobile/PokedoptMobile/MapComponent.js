@@ -73,6 +73,7 @@ export const MapComponent = () => {
               <PokemonPictureMarker
                 location={pokemon.location}
                 name={pokemon.name}
+                radius={pokemon.radius}
                 key={index}
               />
             ))}
