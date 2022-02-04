@@ -1,10 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Circle} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import {PokemonPictureMarker} from './PokemonPictureMarker';
 import {PokemonCircleMarker} from './PokemonCircleMarker';
 import MapViewDirections from 'react-native-maps-directions';
+import {UserContext} from './userContext';
 
 export const MapComponent = () => {
   const [region2, setRegion] = useState({
@@ -19,6 +20,7 @@ export const MapComponent = () => {
   const [showDirection, setShowDirection] = useState(false);
   const [directionStart, setDirectionStart] = useState(null);
   const [directionEnd, setDirectionEnd] = useState(null);
+  const [userContext, setUserContext] = useContext(UserContext);
 
   useEffect(() => {
     location &&
@@ -119,6 +121,7 @@ export const MapComponent = () => {
               origin={directionStart}
               destination={directionEnd}
               apikey={"AIzaSyDvin_US8hJsgioDsVYFvM6RubKu6kRy7E"}
+              mode={userContext.mode}
           />}
         </MapView>
       ) : (
