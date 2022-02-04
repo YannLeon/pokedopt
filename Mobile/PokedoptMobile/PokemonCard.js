@@ -19,7 +19,7 @@ export const PokemonCard = props =>{
             <Card>
                 <Image style={{width: 100, height: 100}} source ={{uri:picture}}/>
                 <Text style={{color:"black", textAlign: 'center'}} >{props.name}</Text>
-                <Button OnPress={()=>console.log(props.name + " just got bought")} title="Adopt it!"/>
+                <Button onPress={()=>console.log(props.name + " just got bought")} title="Adopt it!"/>
             </Card>        
         </View>
     )

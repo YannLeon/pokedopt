@@ -32,7 +32,8 @@ export const MapComponent = () => {
           createPokemon("pikachu"),
           createPokemon("pichu"),
         createPokemon("turtwig"),
-          createPokemon("piplup")
+        createPokemon("piplup"),
+        createPokemon("mewtwo")
       ]);
   }, [location]);
 
