@@ -26,6 +26,8 @@ export const PokemonPictureMarker = props => {
       ]}
       image={picture}
       opacity={0.5}
+      tappable={true}
+      onPress={props.onPress}
     />
   );
 };
