@@ -10,15 +10,16 @@ export const PokemonCard = props =>{
         fetch('https://pokeapi.co/api/v2/pokemon/' + props.name)
           .then(response => response.json())
           .then(responseJSON => {
-            setPicture(responseJSON.sprites.front_default)
+            setPicture(responseJSON.sprites.other["official-artwork"].front_default)
           }).catch(e=>console.log(e));
 
       }, [props.name]);
     return(
         <View style={{justifyContent: 'center',alignItems: 'center',}}>
             <Card>
+              <Text style={{color:"black", textAlign: 'center',fontWeight:'bold',textTransform: 'uppercase'}} >{props.name}</Text>
                 <Image style={{width: 100, height: 100}} source ={{uri:picture}}/>
-                <Text style={{color:"black", textAlign: 'center'}} >{props.name}</Text>
+                
                 <Button onPress={()=>console.log(props.name + " just got bought")} title="Adopt it!"/>
             </Card>        
         </View>
