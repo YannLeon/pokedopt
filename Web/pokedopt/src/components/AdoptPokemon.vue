@@ -23,7 +23,7 @@ export default {
     }
   },
   created() {
-    axios.get("https://pokeapi.co/api/v2/pokemon/?offset=20&limit=20").then((res)=>{
+    axios.get("https://pokeapi.co/api/v2/pokemon/?offset=0&limit=1000").then((res)=>{
           this.pokemons=res.data.results
         }
     );
