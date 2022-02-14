@@ -1,9 +1,11 @@
-import React, {useEffect, useState} from 'react';
+import React, {useContext, useEffect, useState} from 'react';
 import {Text, View, StyleSheet, ActivityIndicator} from 'react-native';
 import MapView, {PROVIDER_GOOGLE, Circle} from 'react-native-maps';
 import Geolocation from 'react-native-geolocation-service';
 import {PokemonPictureMarker} from './PokemonPictureMarker';
 import {PokemonCircleMarker} from './PokemonCircleMarker';
+import MapViewDirections from 'react-native-maps-directions';
+import {UserContext} from './userContext';
 
 export const MapComponent = () => {
   const [region2, setRegion] = useState({
@@ -15,6 +17,10 @@ export const MapComponent = () => {
   const [location, setLocation] = useState(undefined);
 
   const [pokemons, setPokemons] = useState([]);
+  const [showDirection, setShowDirection] = useState(false);
+  const [directionStart, setDirectionStart] = useState(null);
+  const [directionEnd, setDirectionEnd] = useState(null);
+  const [userContext, setUserContext] = useContext(UserContext);
 
   useEffect(() => {
     location &&
@@ -32,18 +38,21 @@ export const MapComponent = () => {
           createPokemon("pikachu"),
           createPokemon("pichu"),
         createPokemon("turtwig"),
-          createPokemon("piplup")
+        createPokemon("piplup"),
+        createPokemon("mewtwo")
+
       ]);
   }, [location]);
 
-  const randLatLong=()=>{
-    return Math.random()/75* (Math.random()>0.5?1:-1)
-  }
-  const randRadius=()=>{
-    return Math.random()*200
-  }
+  const randLatLong = () => {
+    return (Math.random() / 75) * (Math.random() > 0.5 ? 1 : -1);
+  };
+  const randRadius = () => {
+    const radius = Math.random() * 250
+    return radius<40?radius+40:radius;
+  };
 
-  const createPokemon = (name) => {
+  const createPokemon = name => {
     return {
       name: name,
       location: {
@@ -51,8 +60,13 @@ export const MapComponent = () => {
         longitude: location.longitude + randLatLong(),
       },
       radius: randRadius(),
+    };
+  };
+  useEffect(() => {
+    if (directionEnd !== null && directionStart !== null) {
+      setShowDirection(true);
     }
-  }
+  });
 
   const onRegionChange = region => {
     setRegion(region);
@@ -87,7 +101,7 @@ export const MapComponent = () => {
           }}>
           {pokemons.length > 0 &&
             pokemons.map((pokemon, index) => (
-<PokemonCircleMarker pokemon={pokemon} key={index}/>
+              <PokemonCircleMarker pokemon={pokemon} key={index} />
             ))}
           {pokemons.length > 0 &&
             pokemons.map((pokemon, index) => (
@@ -96,8 +110,19 @@ export const MapComponent = () => {
                 name={pokemon.name}
                 radius={pokemon.radius}
                 key={index}
+                onPress={() => {
+                  setDirectionStart(location);
+                  setDirectionEnd(pokemon.location);
+                }}
               />
             ))}
+          {showDirection&&
+          <MapViewDirections
+              origin={directionStart}
+              destination={directionEnd}
+              apikey={"AIzaSyDvin_US8hJsgioDsVYFvM6RubKu6kRy7E"}
+              mode={userContext.mode}
+          />}
         </MapView>
       ) : (
         <View style={[styles.container2, styles.horizontal]}>
