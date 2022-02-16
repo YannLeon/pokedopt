@@ -5,7 +5,7 @@
     img-alt="Image"
     img-top
     tag="article"
-    style="max-width: 15rem"
+    :style="{'max-width': size}"
     class="m-1"
   >
     <b-card-text> A great pokemon </b-card-text>
@@ -24,17 +24,31 @@ export default {
     return {
       namePokemon: "",
       image: "",
+      size: "15rem"
     };
   },
   props: {
     pokemon: Object,
   },
   created() {
-    axios.get(this.pokemon.url).then((res) => {
-      this.namePokemon = res.data.name;
-      this.image = res.data.sprites.other["official-artwork"].front_default;
-    });
+    if(this.mobile){
+      this.size = "10rem";
+      axios.get(this.pokemon.pokemon.url).then((res) => {
+        this.namePokemon = res.data.name;
+        this.image = res.data.sprites.other["official-artwork"].front_default;
+      });
+    }else {
+      axios.get(this.pokemon.url).then((res) => {
+        this.namePokemon = res.data.name;
+        this.image = res.data.sprites.other["official-artwork"].front_default;
+      });
+    }
   },
+  computed: {
+    mobile() {
+      return this.$store.getters.isMobile;
+    },
+  }
 };
 </script>
 

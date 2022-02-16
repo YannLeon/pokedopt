@@ -2,27 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e57ff0cd-782b-4369-9c6b-595863ca28db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pokedopt/public/static/banniere_poke.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/public/static/banniere_poke2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/public/static/logo_pokemon1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/public/static/mini_logo_pokemon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/assets/mini_logo_pokemon.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/assets/ponyta.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/AdoptPokemon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/IconMap.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/MainPage.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/NewPokemon.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/Radar.vue" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/Recommendation.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/InfosPokemon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokedopt/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/NavBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/NavBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/AdoptPokemon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/AdoptPokemon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokedopt/src/components/Pokemon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/Pokemon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/src/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/main.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/PokemonMarker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/PokemonMarker.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/Radar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/Radar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/SideBar.vue" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pokedopt/src/store/pokemon.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/store/pokemon.store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,6 +27,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
   <component name="ProjectId" id="2401mACvOIr9cgS0ikfmqArLW3L" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -51,7 +42,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/pokedopt/src/assets" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -76,7 +67,16 @@
       <workItem from="1642801178432" duration="1042000" />
       <workItem from="1642839904493" duration="80000" />
       <workItem from="1642840078295" duration="12448000" />
-      <workItem from="1642858568265" duration="5318000" />
+      <workItem from="1642858568265" duration="5670000" />
+      <workItem from="1642865559872" duration="19000" />
+      <workItem from="1643041280945" duration="760000" />
+      <workItem from="1643212279172" duration="149000" />
+      <workItem from="1643801121571" duration="855000" />
+      <workItem from="1643879090231" duration="119000" />
+      <workItem from="1643959243594" duration="11926000" />
+      <workItem from="1643978289391" duration="458000" />
+      <workItem from="1644848988063" duration="3356000" />
+      <workItem from="1645031917190" duration="11039000" />
     </task>
     <servers />
   </component>
@@ -85,19 +85,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1642768483996">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1642768483996" />
-    <state x="549" y="167" key="FileChooserDialogImpl" timestamp="1642841089408">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state x="549" y="167" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1642841089408" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1642852535229">
-      <screen x="0" y="0" width="1536" height="824" />
-    </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1536.824@0.0.1536.824" timestamp="1642852535229" />
   </component>
 </project>

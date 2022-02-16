@@ -10,7 +10,7 @@
     >
       <l-tile-layer :url="url"></l-tile-layer>
       <l-circle-marker :lat-lng="userPos" :radius="6" :color="'blue'"></l-circle-marker>
-      <div v-if="!$store.getters.isMobile"> 
+      <div v-if="!$store.getters.isMobile">
         <PokemonMarker v-for="pokemon in detectedPokemons" :key="pokemon.pokemonUrl" :pokemon="pokemon"></PokemonMarker>
       </div>
       <div v-else>
@@ -103,7 +103,6 @@ name: "Radar",
           this.routeToPokemon.push([coord[1], coord[0]]);
         })
       });
-      console.log(this.routeToPokemon);
     }
   },
   computed:{
@@ -134,5 +133,9 @@ name: "Radar",
     position: relative;
     width: 100%;
     height: 100%;
+  }
+
+  .infosPokemon{
+    display: flex;
   }
 </style>
