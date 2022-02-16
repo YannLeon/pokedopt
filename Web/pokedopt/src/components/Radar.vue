@@ -65,7 +65,7 @@ name: "Radar",
           pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/2/'
         },
         {
-          pos: [43.639682, 7.005503],
+          pos: [43.623209, 7.076777],
           pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/3/'
         },
         {
@@ -79,7 +79,71 @@ name: "Radar",
         {
           pos: [43.626019, 7.045348],
           pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/6/'
-        }
+        },
+        {
+          pos: [43.612080, 7.060562],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/raichu/'
+        },
+        {
+          pos: [43.607035, 7.073253],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/magnemite/'
+        },
+        {
+          pos: [43.601514, 7.095241],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/magneton/'
+        },
+        {
+          pos: [43.608813, 7.088507],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/voltorb/'
+        },
+        {
+          pos: [43.601042, 7.064822],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/electabuzz/'
+        },
+        {
+          pos: [43.597644, 7.058089],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/jolteon/'
+        },
+        {
+          pos: [43.596607, 7.073192],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/zapdos/'
+        },
+        {
+          pos: [43.591435, 7.061354],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/chinchou/'
+        },
+        {
+          pos: [43.613162, 7.083404],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/lanturn/'
+        },
+        {
+          pos: [43.590173, 7.055227],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/pichu/'
+        },
+        {
+          pos: [43.605840, 7.055941],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/mareep/'
+        },
+        {
+          pos: [43.601475, 7.085880],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/flaaffy/'
+        },
+        {
+          pos: [43.618850, 7.064325],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/ampharos/'
+        },
+        {
+          pos: [43.618036, 7.077492],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/elekid/'
+        },
+        {
+          pos: [43.620771, 7.058200],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/raikou/'
+        },
+        {
+          pos: [43.626239, 7.069633],
+          pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/electrike/'
+        },
       ],
       apiKey: '5b3ce3597851110001cf624820b606c7e09545fe87a796c8b3c78860',
       routeToPokemon: []

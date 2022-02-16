@@ -7,8 +7,10 @@
       <l-popup>
         <div class="pokemon-descr">
           <h1>{{pokemonData.name}}</h1>
-          <b-button v-if="!$store.getters.isMobile" class="btn-success" @click="followPokemon()">SUIVRE</b-button>
-          <b-button class="btn-success" @click="show=true;displayMoreInfos();">Afficher Infos</b-button>
+          <div v-if="!$store.getters.isMobile">
+            <b-button class="btn-success btn-follow" @click="followPokemon()">SUIVRE</b-button>
+            <b-button class="btn-success" @click="show=true;displayMoreInfos();">Afficher Infos</b-button>
+          </div>
         </div>
       </l-popup>
     </l-marker>
@@ -74,4 +76,8 @@ export default {
   height: 75px;
   width: auto;
 }
+
+  .btn-follow{
+    margin-right: 5px;
+  }
 </style>
