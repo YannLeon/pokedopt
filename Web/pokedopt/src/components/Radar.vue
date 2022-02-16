@@ -10,12 +10,12 @@
     >
       <l-tile-layer :url="url"></l-tile-layer>
       <l-circle-marker :lat-lng="userPos" :radius="6" :color="'blue'"></l-circle-marker>
-      <div v-if="!mobile"> 
-        <IconMap v-for="pokemon in detectedPokemons" :key="pokemon.pokemonUrl" :pokemon="pokemon"></IconMap>
+      <div v-if="!$store.getters.isMobile"> 
+        <PokemonMarker v-for="pokemon in detectedPokemons" :key="pokemon.pokemonUrl" :pokemon="pokemon"></PokemonMarker>
       </div>
       <div v-else>
         <div v-if="selectedPokemon">
-          <FollowedPokemon></FollowedPokemon>
+          <PokemonMarker :pokemon="$store.getters.getSelectedPokemon"></PokemonMarker>
           <div v-if="routeToPokemon.length">
             <l-polyline :lat-lngs="routeToPokemon"></l-polyline>
           </div>
@@ -29,8 +29,7 @@
 
 import { LMap, LTileLayer, LCircleMarker, LPolyline } from 'vue2-leaflet';
 import 'leaflet/dist/leaflet.css';
-import IconMap from "@/components/IconMap";
-import FollowedPokemon from './FollowedPokemon.vue';
+import PokemonMarker from "@/components/PokemonMarker";
 import axios from 'axios';
 
 export default {
@@ -39,8 +38,7 @@ name: "Radar",
     LMap,
     LTileLayer,
     LCircleMarker,
-    IconMap,
-    FollowedPokemon,
+    PokemonMarker,
     LPolyline
   },
   data () {
@@ -83,6 +81,7 @@ name: "Radar",
           pokemonUrl: 'https://pokeapi.co/api/v2/pokemon/6/'
         }
       ],
+      apiKey: '5b3ce3597851110001cf624820b606c7e09545fe87a796c8b3c78860',
       routeToPokemon: []
     }
   },
@@ -94,11 +93,10 @@ name: "Radar",
         this.userPos= this.center;
       });
     }
-    if(this.mobile){
-      const apiKey= '5b3ce3597851110001cf624820b606c7e09545fe87a796c8b3c78860';
+    if(this.$store.getters.isMobile){
       const start = `${this.userPos[1]}, ${this.userPos[0]}`;
       const end = `${this.selectedPokemon.pos[1]},${this.selectedPokemon.pos[0]}`;
-      const url = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${apiKey}&start=${start}&end=${end}`;
+      const url = `https://api.openrouteservice.org/v2/directions/driving-car?api_key=${this.apiKey}&start=${start}&end=${end}`;
       axios.get(url).then((res)=>{
         const temp = res.data.features[0].geometry.coordinates;
         temp.forEach(coord => {
@@ -109,9 +107,6 @@ name: "Radar",
     }
   },
   computed:{
-    mobile(){
-      return this.$store.getters.isMobile;
-    },
     selectedPokemon(){
       return this.$store.getters.getSelectedPokemon;
     }
