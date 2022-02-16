@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e57ff0cd-782b-4369-9c6b-595863ca28db" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pokedopt/src/components/InfosPokemon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokedopt/src/components/AdoptPokemon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/AdoptPokemon.vue" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pokedopt/src/components/Pokemon.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/Pokemon.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/PokemonMarker.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/PokemonMarker.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/Radar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/components/Radar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pokedopt/src/components/SideBar.vue" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pokedopt/src/store/pokemon.store.js" beforeDir="false" afterPath="$PROJECT_DIR$/pokedopt/src/store/pokemon.store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

@@ -33,16 +33,11 @@ export default {
   created() {
     if(this.mobile){
       this.size = "10rem";
-      axios.get(this.pokemon.pokemon.url).then((res) => {
-        this.namePokemon = res.data.name;
-        this.image = res.data.sprites.other["official-artwork"].front_default;
-      });
-    }else {
+    }
       axios.get(this.pokemon.url).then((res) => {
         this.namePokemon = res.data.name;
         this.image = res.data.sprites.other["official-artwork"].front_default;
       });
-    }
   },
   computed: {
     mobile() {

@@ -32,24 +32,32 @@ export default {
                 let country = address.data.address.country;
                 if(country==="France"){
                   axios.get("https://pokeapi.co/api/v2/type/electric").then((pokemons) => {
-                        this.pokemons = pokemons.data.pokemon;
+                    for(let i = 0; i <pokemons.data.pokemon.length ; i++){
+                      this.pokemons.push(pokemons.data.pokemon[i].pokemon);
+                    }
                       }
                   );
                 }else if(country==="United States"){
                   axios.get("https://pokeapi.co/api/v2/type/rock").then((pokemons) => {
-                        this.pokemons = pokemons.data.pokemon;
+                    for(let i = 0; i <pokemons.data.pokemon.length ; i++){
+                      this.pokemons.push(pokemons.data.pokemon[i].pokemon);
+                    }
                       }
                   );
                 }
                 else if(country==="Brazil"){
                   axios.get("https://pokeapi.co/api/v2/type/fire").then((pokemons) => {
-                        this.pokemons = pokemons.data.pokemon;
+                    for(let i = 0; i <pokemons.data.pokemon.length ; i++){
+                      this.pokemons.push(pokemons.data.pokemon[i].pokemon);
+                    }
                       }
                   );
                 }
                 else if(country==="Canada"){
                   axios.get("https://pokeapi.co/api/v2/type/ice").then((pokemons) => {
-                        this.pokemons = pokemons.data.pokemon;
+                    for(let i = 0; i <pokemons.data.pokemon.length ; i++){
+                      this.pokemons.push(pokemons.data.pokemon[i].pokemon);
+                    }
                       }
                   );
                 }
